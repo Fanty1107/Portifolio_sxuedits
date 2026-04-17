@@ -99,7 +99,7 @@
                     </div>
 
                     <div class="p-5 text-center bg-gray-900 border-t border-gray-800">
-                        <h3 class="font-display text-xl text-white">SHORTS</h3>
+                        <h3 class="font-display text-xl text-white">SELLING VIDEOS</h3>
                     </div>
                 </div>
 
@@ -118,7 +118,7 @@
                     </div>
 
                     <div class="p-5 text-center bg-gray-900 border-t border-gray-800">
-                        <h3 class="font-display text-xl text-white">REELS</h3>
+                        <h3 class="font-display text-xl text-white">GAMING</h3>
                     </div>
                 </div>
 
@@ -149,7 +149,7 @@
                     <img src="instagram.png" alt="Instagram" class="w-10 h-10 object-contain filter hover:brightness-125">
                 </a>
 
-                <a href="https://tiktok.com/@sxuedits" target="_blank" class="transform hover:scale-110 transition-transform duration-300">
+                <a href="https://tiktok.com/@sxuszz" target="_blank" class="transform hover:scale-110 transition-transform duration-300">
                     <img src="tiktok.png" alt="TikTok" class="w-10 h-10 object-contain filter hover:brightness-125">
                 </a>
 
@@ -157,7 +157,7 @@
                     <img src="Youtube logo png.png" alt="YouTube" class="w-10 h-10 object-contain filter hover:brightness-125">
                 </a>
 
-                <a href="https://x.com/SaulooZ" target="_blank" class="transform hover:scale-110 transition-transform duration-300">
+                <a href="https://x.com/amofadinhaszz" target="_blank" class="transform hover:scale-110 transition-transform duration-300">
                     <img src="twitter-x-logo.png" alt="X / Twitter" class="w-10 h-10 object-contain filter hover:brightness-125">
                 </a>
 
@@ -168,10 +168,10 @@
     </footer>
 
     <script>
-        // LISTA DE ARQUIVOS (Longos agora só tem 2)
+        // LISTA DE ARQUIVOS 
         const playlists = {
             long:   ['long-1.mp4', 'long-2.mp4'], 
-            shorts: ['shorts-1.mp4', 'shorts-2.mp4', 'shorts-3.mp4'],
+            shorts: ['shorts-1.mp4', 'shorts-2.mp4', 'shorts-3.mp4', 'shorts-4.mp4'],
             reels:  ['reels-1.mp4', 'reels-2.mp4', 'reels-3.mp4']
         };
 
@@ -198,23 +198,20 @@
             const newSrc = playlists[category][newIndex];
 
             videoElement.src = newSrc;
-            videoElement.load(); // Carrega o vídeo novo
+            videoElement.load(); 
             
-            // Tenta dar Play automático
-            // Nota: Navegadores permitem autoplay se o usuário interagiu (clicou) com a página antes
+           
             var playPromise = videoElement.play();
 
             if (playPromise !== undefined) {
                 playPromise.then(_ => {
-                    // Autoplay iniciou com sucesso
+                    
                 })
                 .catch(error => {
-                    // Previne erros no console caso o navegador bloqueie
+                    
                     console.log("Autoplay bloqueado pelo navegador até interação do usuário");
                 });
             }
-
-            // Atualiza contador
             counterElement.innerText = `${newIndex + 1}/${playlists[category].length}`;
         }
     </script>
